@@ -10,10 +10,21 @@ namespace FirstWebApi.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        //public IEnumerable<string> Get()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
+
+        public IEnumerable<string> Get([FromBody] string value)
         {
             return new string[] { "value1", "value2" };
         }
+
+        //[HttpGet]
+        //public IEnumerable<string> Test()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
 
         // GET api/values/5
         public string Get(int id)
